@@ -1,0 +1,71 @@
+.services-c {
+  padding: 1em 0 5em 0;
+  overflow: hidden;
+  .services-nav {
+    padding: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #E7E7E7;
+    margin-bottom: 1em;
+    .service-nav-card {
+      cursor: pointer;
+      margin: 1.5em 4em;
+      padding: 0.8em 1em;
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 0.8em;
+      border: 1px solid transparent;
+      width: 100%;
+      max-width: 22.7em;
+      transition: .2s;
+      .serv-navCard-img-s {
+        width: 4em;
+        height: 4em;
+        padding: 0.5em;
+        background: #fafafa;
+        border-radius: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1.3em;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      span{
+        font-weight: 500;
+        font-size: 1.3em;
+        color: #484848;
+      }
+      &:hover {
+        border: .1em solid #66BD5A;
+        span{
+            color: #66BD5A;
+        }
+      }
+    }
+    .active{
+      border: .1em solid #66BD5A;
+      span{
+          color: #66BD5A;
+      }
+    }
+    @media screen and (max-width:1060px){
+      justify-content: space-around;
+      .service-nav-card {
+        margin: 1.5em 1em;
+      }
+    }
+    @media screen and (max-width:6580px){
+      .service-nav-card {
+        font-size: 1.2em;
+      }
+    }
+  }
+  .services-subNav{
+    padding-top: 2em;
+  }
+
+}

@@ -1,0 +1,52 @@
+.portfolio-c{
+  padding: 7.4em 4em 6em 4em;
+  overflow: hidden;
+  p{
+    font-weight: 400;
+    font-size: 2.7em; 
+    color: #484848;
+    max-width: 24.7em;
+    margin-left: 2em;
+  }
+  .portfolio-card-s {
+    margin-top: 5.8em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .portfolio-card{
+      width: 27.4em;
+      height: 13em;
+      padding: 2.1em 4.8em;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: .1em solid #DEDEDE;
+      border-radius: 1em;
+      margin: 2em 4em;
+      cursor: pointer;
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width:1200px){
+      padding: 3em 1em;
+      p{
+        margin-left: .5em;
+      }
+  }
+  @media screen and (max-width:780px){
+    .portfolio-card-s {
+      .portfolio-card{
+        margin: 1em 2em;
+      }
+    }
+  }
+  @media screen and (max-width:780px){
+    p{
+      font-size: 2.2em;
+    }
+    font-size: 1.1em;
+  }
+}

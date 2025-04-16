@@ -1,0 +1,277 @@
+.nav-s {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  .nav-c {
+    width: 100%;
+    max-width: 144em;
+    padding: 3.5em 5em 2.4em 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .nav-left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        margin-right: 8.8em;
+        cursor: pointer;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li {
+          font-weight: 400;
+          font-size: 1.6em;
+          color: #484848;
+          margin: 0 1.6em;
+          cursor: pointer;
+          transition: 0.2s;
+          &:hover {
+            color: #66bd5a;
+          }
+        }
+      }
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        background: #fff;
+        border: 1px solid #66bd5a;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 1.4em;
+        color: #66bd5a;
+        padding: 0.71em 2.71em;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          background: #66bd5a;
+          color: #fff;
+        }
+      }
+      .inpt-c {
+        position: relative;
+        max-width: 200px;
+        width: 100%;
+        margin-left: 2em;
+        input {
+          font-weight: 400;
+          font-size: 1.4em;
+          padding: 0.78em 1.64em;
+          background: #fff;
+          border: 1px solid #e7e7e7;
+          color: #000;
+          transition: 0.2s;
+          border-radius: 0.71em;
+          &::placeholder {
+            color: #b3b3b3;
+          }
+          &:hover {
+            border: 1px solid #b5b5b5;
+          }
+          &:focus {
+            border: 0.1em solid #66bd5a;
+          }
+        }
+      }
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+        margin-left: 2rem;
+        //display: none;
+        .bar {
+          width: 2rem;
+          height: 0.1rem;
+          background: #000435;
+          margin: 0.3rem 0;
+          transition: 0.4s;
+        }
+        &.x {
+          :nth-child(2) {
+            opacity: 0;
+          }
+
+          :nth-child(1) {
+            transform: translateY(0.6rem) rotate(45deg);
+          }
+
+          :nth-child(3) {
+            transform: translateY(-0.8rem) rotate(-45deg);
+          }
+        }
+      }
+    }
+    .side-nav-menu {
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.4s;
+      position: absolute;
+      top: 10rem;
+      right: 0;
+      background: #fff;
+      width: 33rem;
+      min-height: 70rem;
+      z-index: 99;
+      border-left: 1px solid rgba(217, 217, 217, 0.527);
+
+      .sidenav-user-links-c {
+        padding: 1rem 2rem;
+        width: 30rem;
+
+        .sideNav-link-c {
+          margin: 1.5rem 0;
+          display: flex;
+          flex-direction: column;
+          cursor: pointer;
+
+          .sideNav-link {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.7rem;
+            text-transform: capitalize;
+            font-weight: 500;
+            color: #080a28;
+            transition-duration: 0.2s;
+
+            &:hover {
+              color: #7856db;
+              padding-left: 0.5rem;
+            }
+          }
+
+          .linkName-grey {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #636477;
+            transition: 0.3s;
+
+            &:hover {
+              color: #7856db;
+              padding-left: 0.5rem;
+            }
+          }
+
+          .sideNav-sublink-c {
+            display: none;
+            padding: 1rem;
+
+            .sideNav-sublink {
+              padding: 1rem 0;
+              font-size: 1.4rem;
+              font-weight: 500;
+              color: #636477;
+              padding-left: 1rem;
+              transition-duration: 0.2s;
+              list-style: none;
+              position: relative;
+
+              &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -3px;
+                width: 5px;
+                height: 5px;
+                background-color: #9777fa;
+                border-radius: 50%;
+                opacity: 0.7;
+                transition-duration: 0.2s;
+              }
+
+              &:hover {
+                color: #7856db;
+                padding-left: 1.5rem;
+              }
+            }
+          }
+
+          .sideNav-sublink-c.show {
+            display: block;
+          }
+        }
+
+        .submenus-line {
+          width: 100%;
+          background: rgba(226, 226, 226, 0.438);
+          height: 0.1rem;
+        }
+
+        .sideNav-link-header {
+          font-weight: 600;
+          font-size: 1.8rem;
+          color: #1f2938;
+          margin: 2rem 0;
+        }
+
+        .sideNav-socialLinks-c {
+          display: flex;
+
+          .sideNav-socialLink {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: #efeaff;
+            list-style: none;
+            margin-right: 0.7rem;
+            padding: 0.6rem;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+              background: #dfd6ff;
+            }
+          }
+        }
+      }
+
+      &.side-nav-menu.openClosesideNav {
+        top: 10rem;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1260px) {
+    .nav-c {
+      .nav-left {
+        ul {
+          display: none;
+        }
+      }
+      .nav-right {
+        //ekran yalniz kicilende hamburger gorsenmeyi ucun (84 cu setri ac)
+        // .hamburger {
+        //   display: flex;
+        // }
+      }
+    }
+  }
+  @media screen and (max-width: 760px) {
+    .nav-c {
+      .nav-right {
+        button {
+          display: none;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 610px) {
+    .nav-c {
+      .nav-right {
+        input {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+.contactP-c {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  .contact-left {
+    form {
+      margin-left: 12em;
+      margin-top: 6.5em;
+      width: 100%;
+      max-width: 41.2em;
+      h1 {
+        font-weight: 600;
+        font-size: 4em;
+        color: #484848;
+        margin-bottom: 0.4em;
+      }
+      p {
+        font-weight: 400;
+        font-size: 1.6em;
+        color: #858585;
+        margin-bottom: .2em;
+      }
+      input {
+        margin-top: 2em;
+        font-weight: 400;
+        font-size: 16px;
+        color: #858585;
+        width: 100%;
+        padding: 0.7em;
+        border-bottom: 1px solid #858585;
+        background: transparent;
+        margin-bottom: .5em;
+      }
+      span{
+        color: red;
+        font-size: 16px;
+      }
+      button {
+        color: #fff;
+        width: 100%;
+        height: 3em;
+        background: #66bd5a;
+        border-radius: 0.35em;
+        font-weight: 600;
+        font-size: 1.7em;
+        cursor: pointer;
+        margin-top: 2.3em;
+      }
+    }
+  }
+  .contact-right {
+    height: 70em;
+    min-height: 70em;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    .contact-info-card {
+      background: #484848;
+      color: #fff;
+      width: 40em;
+      height: 35.4em;
+      margin-right: 7em;
+      padding: 4em;
+      position: relative;
+      h2 {
+        font-weight: 600;
+        font-size: 2.6em;
+        margin-bottom: 1.15em;
+      }
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          margin-bottom: 2.5em;
+          img {
+            margin-right: 1.1em;
+          }
+          span {
+            font-weight: 500;
+            font-size: 1.5em;
+          }
+        }
+      }
+      .contact-right-minibox {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 3.5em;
+        height: 3.5em;
+        background: #66bd5a;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .contact-right-bg {
+      top: 0;
+      right: 0;
+      position: absolute;
+      width: 27em;
+      height: 100%;
+      background: #66bd5a;
+    }
+  }
+  @media screen and (max-width: 1100px) {
+    .contact-left {
+      form {
+        margin-left: 5em;
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    font-size: 8px;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 9px;
+    flex-direction: column;
+    .contact-left {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 6em;
+      form{
+        margin: 2em 0;
+      }
+    }
+  }
+}

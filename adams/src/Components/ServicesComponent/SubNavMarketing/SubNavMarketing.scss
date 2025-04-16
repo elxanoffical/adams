@@ -1,0 +1,59 @@
+.subNav-s {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  padding: 3em 6em;
+  .subNav-c {
+    width: 100%;
+    max-width: 32em;
+    overflow: hidden;
+    .subNav-link {
+      transition: .2s;
+      border: 1px solid transparent;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      min-height: 6.6em;
+      padding: 1.6em 1.4em;
+      background: #fff;
+      border-radius: 1em;
+      margin-bottom: 1.7em;
+      cursor: pointer;
+      
+      img {
+        margin-right: 1.3em;
+        max-width: 4.2em;
+        max-height: 4.2em;
+      }
+      span {
+        font-weight: 700;
+        font-size: 1.4em;
+        line-height: 150%;
+        color: #484848;
+      }
+      &:hover{
+        border: 1px solid #66BD5A;
+        span{
+          color: #66BD5A;
+        }
+      }
+    }
+    .selected-sublink{
+        border: 1px solid #66BD5A;
+        box-shadow: 0 3px 6px  #65bd5a76;
+        span{
+          color: #66BD5A;
+        }
+      }
+  } 
+  @media screen and (max-width:1200px) {
+    padding: 3em;
+    font-size: .8em;
+  }
+  @media screen and (max-width:820px) {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+  }
+}
