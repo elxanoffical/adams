@@ -26,8 +26,6 @@ const Nav = () => {
   const navLinks = useRef();
   const tl = gsap.timeline({ defaults: { duration: 0.4 } });
 
-  
-
   useEffect(() => {
     tl.fromTo(navImg.current, { opacity: 0, y: -20 }, { opacity: 1, y: 0 });
     tl.fromTo(navLinks.current, { opacity: 0, x: -20 }, { opacity: 1, x: 0 });
@@ -122,11 +120,7 @@ const Nav = () => {
             Academy
           </button>
           <div className="inpt-c">
-            <input
-              id="searhInpt"
-              type="text"
-              placeholder="Axtarış . . ."
-            />
+            <input id="searhInpt" type="text" placeholder="Axtarış . . ." />
           </div>
           <div onClick={MenuClicked} className="hamburger">
             <span className="bar"></span>
